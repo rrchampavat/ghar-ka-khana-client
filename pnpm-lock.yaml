@@ -14,14 +14,32 @@ dependencies:
   "@mantine/hooks":
     specifier: ^6.0.19
     version: 6.0.19(react@18.2.0)
+  clsx:
+    specifier: ^2.0.0
+    version: 2.0.0
+  lucide-react:
+    specifier: ^0.269.0
+    version: 0.269.0(react@18.2.0)
+  prettier-plugin-tailwindcss:
+    specifier: ^0.5.3
+    version: 0.5.3(prettier@3.0.2)
   react:
     specifier: ^18.2.0
     version: 18.2.0
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-router-dom:
+    specifier: ^6.15.0
+    version: 6.15.0(react-dom@18.2.0)(react@18.2.0)
+  tailwind-merge:
+    specifier: ^1.14.0
+    version: 1.14.0
 
 devDependencies:
+  "@types/node":
+    specifier: ^20.5.6
+    version: 20.5.6
   "@types/react":
     specifier: ^18.2.15
     version: 18.2.15
@@ -66,7 +84,7 @@ devDependencies:
     version: 5.0.2
   vite:
     specifier: ^4.4.5
-    version: 4.4.5
+    version: 4.4.5(@types/node@20.5.6)
 
 packages:
   /@aashutoshrathi/word-wrap@1.2.6:
@@ -1204,10 +1222,25 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@remix-run/router@1.8.0:
+    resolution:
+      {
+        integrity: sha512-mrfKqIHnSZRyIzBcanNJmVQELTnX+qagEDlcKO90RgRBVOZGSGvZKeDihTRfWcqoDn5N/NkUcwWTccnpN18Tfg==
+      }
+    engines: { node: ">=14.0.0" }
+    dev: false
+
   /@types/json-schema@7.0.12:
     resolution:
       {
         integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==
+      }
+    dev: true
+
+  /@types/node@20.5.6:
+    resolution:
+      {
+        integrity: sha512-Gi5wRGPbbyOTX+4Y2iULQ27oUPrefaB0PxGQJnfyWN3kvEDGM3mIB5M/gQLmitZf7A9FmLeaqxD3L1CXpm3VKQ==
       }
     dev: true
 
@@ -1427,7 +1460,7 @@ packages:
       "@babel/plugin-transform-react-jsx-self": 7.22.5(@babel/core@7.22.10)
       "@babel/plugin-transform-react-jsx-source": 7.22.5(@babel/core@7.22.10)
       react-refresh: 0.14.0
-      vite: 4.4.5
+      vite: 4.4.5(@types/node@20.5.6)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1687,6 +1720,14 @@ packages:
     resolution:
       {
         integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
+      }
+    engines: { node: ">=6" }
+    dev: false
+
+  /clsx@2.0.0:
+    resolution:
+      {
+        integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==
       }
     engines: { node: ">=6" }
     dev: false
@@ -2626,6 +2667,17 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /lucide-react@0.269.0(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-+ViEb/2eJJt43/CtxpTfvqu/8gzK49cSUdeuqRuFYiZmX9AvwfumtETM4plhXHymfHb6/mVbHg9uIlc13y+uew==
+      }
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /merge2@1.4.1:
     resolution:
       {
@@ -2967,6 +3019,64 @@ packages:
     engines: { node: ">= 0.8.0" }
     dev: true
 
+  /prettier-plugin-tailwindcss@0.5.3(prettier@3.0.2):
+    resolution:
+      {
+        integrity: sha512-M5K80V21yM+CTm/FEFYRv9/9LyInYbCSXpIoPAKMm8zy89IOwdiA2e4JVbcO7tvRtAQWz32zdj7/WKcsmFyAVg==
+      }
+    engines: { node: ">=14.21.3" }
+    peerDependencies:
+      "@ianvs/prettier-plugin-sort-imports": "*"
+      "@prettier/plugin-pug": "*"
+      "@shopify/prettier-plugin-liquid": "*"
+      "@shufo/prettier-plugin-blade": "*"
+      "@trivago/prettier-plugin-sort-imports": "*"
+      prettier: ^3.0
+      prettier-plugin-astro: "*"
+      prettier-plugin-css-order: "*"
+      prettier-plugin-import-sort: "*"
+      prettier-plugin-jsdoc: "*"
+      prettier-plugin-marko: "*"
+      prettier-plugin-organize-attributes: "*"
+      prettier-plugin-organize-imports: "*"
+      prettier-plugin-style-order: "*"
+      prettier-plugin-svelte: "*"
+      prettier-plugin-twig-melody: "*"
+    peerDependenciesMeta:
+      "@ianvs/prettier-plugin-sort-imports":
+        optional: true
+      "@prettier/plugin-pug":
+        optional: true
+      "@shopify/prettier-plugin-liquid":
+        optional: true
+      "@shufo/prettier-plugin-blade":
+        optional: true
+      "@trivago/prettier-plugin-sort-imports":
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      prettier-plugin-twig-melody:
+        optional: true
+    dependencies:
+      prettier: 3.0.2
+    dev: false
+
   /prettier@3.0.2:
     resolution:
       {
@@ -2974,7 +3084,6 @@ packages:
       }
     engines: { node: ">=14" }
     hasBin: true
-    dev: true
 
   /punycode@2.3.0:
     resolution:
@@ -3058,6 +3167,35 @@ packages:
       tslib: 2.6.2
       use-callback-ref: 1.3.0(@types/react@18.2.15)(react@18.2.0)
       use-sidecar: 1.1.2(@types/react@18.2.15)(react@18.2.0)
+    dev: false
+
+  /react-router-dom@6.15.0(react-dom@18.2.0)(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-aR42t0fs7brintwBGAv2+mGlCtgtFQeOzK0BM1/OiqEzRejOZtpMZepvgkscpMUnKb8YO84G7s3LsHnnDNonbQ==
+      }
+    engines: { node: ">=14.0.0" }
+    peerDependencies:
+      react: ">=16.8"
+      react-dom: ">=16.8"
+    dependencies:
+      "@remix-run/router": 1.8.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-router: 6.15.0(react@18.2.0)
+    dev: false
+
+  /react-router@6.15.0(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-NIytlzvzLwJkCQj2HLefmeakxxWHWAP+02EGqWEZy+DgfHHKQMUoBBjUQLOtFInBMhWtb3hiUy6MfFgwLjXhqg==
+      }
+    engines: { node: ">=14.0.0" }
+    peerDependencies:
+      react: ">=16.8"
+    dependencies:
+      "@remix-run/router": 1.8.0
+      react: 18.2.0
     dev: false
 
   /react-style-singleton@2.2.1(@types/react@18.2.15)(react@18.2.0):
@@ -3334,6 +3472,13 @@ packages:
       }
     dev: false
 
+  /tailwind-merge@1.14.0:
+    resolution:
+      {
+        integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==
+      }
+    dev: false
+
   /tailwindcss@3.3.3:
     resolution:
       {
@@ -3575,7 +3720,7 @@ packages:
       }
     dev: true
 
-  /vite@4.4.5:
+  /vite@4.4.5(@types/node@20.5.6):
     resolution:
       {
         integrity: sha512-4m5kEtAWHYr0O1Fu7rZp64CfO1PsRGZlD3TAB32UmQlpd7qg15VF7ROqGN5CyqN7HFuwr7ICNM2+fDWRqFEKaA==
@@ -3606,6 +3751,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      "@types/node": 20.5.6
       esbuild: 0.18.20
       postcss: 8.4.28
       rollup: 3.28.1

@@ -1,14 +1,19 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
   content: ["./src/**/*.{html,js,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: "#3d403a",
-        secondary: "#0c0c0d",
-        accent: "#736d78",
-        text: "#f5f5f4",
-        background: "#0d0d0c"
+        primary: "#5d87ff",
+        secondary: "#4ABDFB",
+        accent: "#edf0ff",
+        text: "#2B3248",
+        background: "#F2F4FC"
+      },
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans]
       }
     }
   },
