@@ -5,6 +5,6 @@ module.exports = {
     `npx prettier --check ${filenames.join(" ")}`
   ],
 
-  "**/*.(md|json|yaml)": (filenames) =>
+  "**/*.(md|json|yaml|cjs|html)": (filenames) =>
     `npx prettier --write ${filenames.join(" ")}`
 };
