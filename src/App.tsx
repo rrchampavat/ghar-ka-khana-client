@@ -2,11 +2,12 @@ import { Suspense } from "react";
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import routes from "./routes/routes";
+import Fallback from "./components/ui/fallback";
 
 function App() {
   return (
-    <Suspense fallback={<h1>Loading</h1>}>
-      <RouterProvider router={routes} fallbackElement={<h1>Loading</h1>} />
+    <Suspense fallback={<Fallback />}>
+      <RouterProvider router={routes} fallbackElement={<Fallback />} />
     </Suspense>
   );
 }

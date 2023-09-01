@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
-import {
-  Button as MantineButton,
-  ButtonProps as BUTTON_PROPS
-} from "@mantine/core";
+import { Button as MantineButton, ButtonProps } from "@mantine/core";
+
+interface BUTTON_PROPS extends ButtonProps {
+  onClick?: () => void;
+}
 
 const Button = (props: BUTTON_PROPS) => {
   const {
@@ -23,6 +24,7 @@ const Button = (props: BUTTON_PROPS) => {
     uppercase: isUppercase = false,
     variant = "default",
     className,
+    onClick,
     ...rest
   } = props;
 
@@ -44,9 +46,10 @@ const Button = (props: BUTTON_PROPS) => {
       uppercase={isUppercase}
       variant={variant}
       className={cn(
-        "bg-primary font-normal text-white hover:bg-primary",
+        "bg-primary font-normal text-white hover:bg-hover",
         className
       )}
+      onClick={onClick}
       {...rest}
     >
       {children}

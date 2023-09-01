@@ -1,12 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Login } from "./lazyLoading";
+import { Login, NotFound, ServerError, SignUp } from "./lazyLoading";
 import AuthLayout from "@/layout/Auth/auth";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <AuthLayout />,
-    children: [{ path: "/", element: <Login /> }]
+    errorElement: <ServerError />,
+    children: [
+      { path: "/", element: <Login /> },
+      { path: "/sign-up", element: <SignUp /> }
+    ]
+  },
+  {
+    path: "*",
+    element: <NotFound />
   }
 ]);
 
