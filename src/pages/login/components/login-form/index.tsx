@@ -27,8 +27,9 @@ const LoginForm = () => {
     { re: /[A-Z]/, label: "Includes uppercase letter" },
     { re: /[$&+,:;=?@#|'<>.^*()%!-]/, label: "Includes special symbol" }
   ];
+
   return (
-    <div className="mx-auto py-40 md:basis-5/12 md:px-10 md:py-64 xl:basis-4/12 xl:px-28">
+    <section className="mx-auto py-40 md:basis-5/12 md:px-10 md:py-64 xl:basis-4/12 xl:px-28">
       <Text className="mb-3 text-left text-3xl font-medium">
         Welcome to DUKAAN
       </Text>
@@ -65,7 +66,7 @@ const LoginForm = () => {
         <Text>New to DUKAAN?</Text>
         <Anchor href="sign-up">Create an account</Anchor>
       </div>
-    </div>
+    </section>
   );
 };
 
