@@ -10,8 +10,22 @@ describe("Button Test", () => {
   });
 
   it("Button should be disabled", () => {
-    const { container } = render(<Button disabled={true}>Submit</Button>);
+    const { container } = render(<Button disabled></Button>);
 
     expect(container.querySelector("button")?.disabled).toBeTruthy();
   });
+
+  // it("Button should react to click event", () => {
+  //   render(<Button onClick={() => console.log("Clicked")}>Submit</Button>);
+
+  //   const button = screen.getByRole("button");
+
+  //   fireEvent.click(button);
+  // });
+
+  // it("Button width should be 100%", () => {
+  //   const { container } = render(<Button fullWidth>Submit</Button>);
+
+  //   expect(container.querySelector("button")?.offsetWidth).toBe("100%");
+  // });
 });
