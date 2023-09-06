@@ -1,5 +1,5 @@
-import { render } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { fireEvent, render } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import Button from "..";
 
 describe("Button Test", () => {
@@ -15,13 +15,15 @@ describe("Button Test", () => {
     expect(container.querySelector("button")?.disabled).toBeTruthy();
   });
 
-  // it("Button should react to click event", () => {
-  //   render(<Button onClick={() => console.log("Clicked")}>Submit</Button>);
+  it("Button should react to click", () => {
+    const handleClick = vi.fn();
 
-  //   const button = screen.getByRole("button");
+    const { container } = render(<Button onClick={handleClick}>Submit</Button>);
 
-  //   fireEvent.click(button);
-  // });
+    fireEvent.click(container.querySelector("button")!);
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
 
   // it("Button width should be 100%", () => {
   //   const { container } = render(<Button fullWidth>Submit</Button>);
