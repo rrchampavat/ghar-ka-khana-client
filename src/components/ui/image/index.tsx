@@ -4,33 +4,14 @@ import {
 } from "@mantine/core";
 
 const Image = (props: IMAGE_PROPS) => {
-  const {
-    alt,
-    caption,
-    fit,
-    height,
-    imageProps,
-    imageRef,
-    placeholder,
-    radius = "sm",
-    src,
-    width,
-    withPlaceholder: isWithPlaceHolder = true,
-    ...rest
-  } = props;
+  const { fallbackSrc, fit, onError, radius = "sm", src, ...rest } = props;
   return (
     <MantineImage
-      alt={alt}
-      caption={caption}
+      fallbackSrc={fallbackSrc}
       fit={fit}
-      height={height}
-      width={width}
-      imageProps={imageProps}
-      imageRef={imageRef}
-      placeholder={placeholder}
+      onError={onError}
       radius={radius}
       src={src}
-      withPlaceholder={isWithPlaceHolder}
       {...rest}
     />
   );

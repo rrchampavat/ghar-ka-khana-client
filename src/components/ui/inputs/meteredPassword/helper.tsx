@@ -12,10 +12,11 @@ export const PasswordRequirement = ({
 }) => {
   return (
     <Text
-      color={meets ? "teal" : "red"}
-      sx={{ display: "flex", alignItems: "center" }}
       mt={7}
       size="sm"
+      className={`relative flex justify-center ${
+        meets ? "text-green-600" : "text-red-600"
+      }`}
     >
       {meets ? (
         <Check className="text-green-600" />

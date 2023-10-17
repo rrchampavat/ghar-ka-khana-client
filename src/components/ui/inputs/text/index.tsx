@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import {
   TextInput as MantineTextInput,
   TextInputProps as TEXT_INPUT_PROPS
@@ -10,8 +11,6 @@ const TextInput = (props: TEXT_INPUT_PROPS) => {
     disabled: isDisabled = false,
     error,
     errorProps,
-    icon,
-    iconWidth,
     inputContainer,
     inputWrapperOrder,
     label,
@@ -27,6 +26,15 @@ const TextInput = (props: TEXT_INPUT_PROPS) => {
     withAsterisk: isWithAsterisk = false,
     wrapperProps,
     className,
+    leftSection,
+    leftSectionPointerEvents = "auto",
+    leftSectionProps,
+    leftSectionWidth,
+    multiline: isMultiline = false,
+    pointer: isPointer = true,
+    rightSectionPointerEvents = "auto",
+    withAria: isWithAria = true,
+    withErrorStyles: isWithErrorStyles = true,
     ...rest
   } = props;
 
@@ -37,8 +45,6 @@ const TextInput = (props: TEXT_INPUT_PROPS) => {
       disabled={isDisabled}
       error={error}
       errorProps={errorProps}
-      icon={icon}
-      iconWidth={iconWidth}
       inputContainer={inputContainer}
       inputWrapperOrder={inputWrapperOrder}
       label={label}
@@ -53,7 +59,16 @@ const TextInput = (props: TEXT_INPUT_PROPS) => {
       variant={variant}
       withAsterisk={isWithAsterisk}
       wrapperProps={wrapperProps}
-      className={className}
+      className={cn("", className)}
+      leftSection={leftSection}
+      leftSectionPointerEvents={leftSectionPointerEvents}
+      leftSectionProps={leftSectionProps}
+      leftSectionWidth={leftSectionWidth}
+      multiline={isMultiline}
+      pointer={isPointer}
+      rightSectionPointerEvents={rightSectionPointerEvents}
+      withAria={isWithAria}
+      withErrorStyles={isWithErrorStyles}
       {...rest}
     />
   );

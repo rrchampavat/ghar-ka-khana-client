@@ -13,14 +13,17 @@ const CheckBox = (props: CHECKBOX_PROPS) => {
     label,
     labelPosition,
     radius,
-    transitionDuration,
     wrapperProps,
     className,
+    id,
+    rootRef,
+    size = "sm",
     ...rest
   } = props;
 
   return (
     <MantineCheckBox
+      id={id}
       color={color}
       description={description}
       error={error}
@@ -29,9 +32,10 @@ const CheckBox = (props: CHECKBOX_PROPS) => {
       label={label}
       labelPosition={labelPosition}
       radius={radius}
-      transitionDuration={transitionDuration}
       wrapperProps={wrapperProps}
       className={className}
+      rootRef={rootRef}
+      size={size}
       {...rest}
     />
   );

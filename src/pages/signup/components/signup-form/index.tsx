@@ -75,7 +75,7 @@ const SignUpForm = () => {
 
       <div className="flex items-center space-x-3">
         <Text>Already have an account?</Text>
-        <Anchor href="/">Sign In</Anchor>
+        <Anchor href="/login">Sign In</Anchor>
       </div>
     </section>
   );

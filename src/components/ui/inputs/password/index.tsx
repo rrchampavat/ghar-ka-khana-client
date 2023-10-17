@@ -16,8 +16,6 @@ const PasswordInput = (props: PASSWORD_INPUT_PROPS) => {
     disabled: isDisabled = false,
     error,
     errorProps,
-    icon,
-    iconWidth,
     inputContainer,
     inputWrapperOrder,
     label,
@@ -26,15 +24,25 @@ const PasswordInput = (props: PASSWORD_INPUT_PROPS) => {
     radius = "sm",
     required: isRequired = false,
     size = "md",
-    toggleTabIndex,
     type = passwordType,
     variant = "default",
     visibilityToggleIcon,
-    visibilityToggleLabel,
     visible: isVisible,
     withAsterisk: isWithAsterisk = false,
     wrapperProps,
     className,
+    leftSection,
+    leftSectionPointerEvents = "auto",
+    leftSectionProps,
+    leftSectionWidth,
+    multiline: isMultiline = false,
+    pointer: isPointer = true,
+    rightSection,
+    rightSectionPointerEvents = "auto",
+    rightSectionProps,
+    rightSectionWidth,
+    withAria: isWithAria = true,
+    withErrorStyles: isWithErrorStyles = true,
     ...rest
   } = props;
 
@@ -53,8 +61,6 @@ const PasswordInput = (props: PASSWORD_INPUT_PROPS) => {
       disabled={isDisabled}
       error={error}
       errorProps={errorProps}
-      icon={icon}
-      iconWidth={iconWidth}
       inputContainer={inputContainer}
       inputWrapperOrder={inputWrapperOrder}
       label={label}
@@ -63,15 +69,25 @@ const PasswordInput = (props: PASSWORD_INPUT_PROPS) => {
       radius={radius}
       required={isRequired}
       size={size}
-      toggleTabIndex={toggleTabIndex}
       type={type}
       variant={variant}
       visibilityToggleIcon={visibilityToggleIcon}
-      visibilityToggleLabel={visibilityToggleLabel}
       visible={isVisible}
       withAsterisk={isWithAsterisk}
       wrapperProps={wrapperProps}
       className={className}
+      leftSection={leftSection}
+      leftSectionPointerEvents={leftSectionPointerEvents}
+      leftSectionProps={leftSectionProps}
+      leftSectionWidth={leftSectionWidth}
+      multiline={isMultiline}
+      pointer={isPointer}
+      rightSection={rightSection}
+      rightSectionPointerEvents={rightSectionPointerEvents}
+      rightSectionProps={rightSectionProps}
+      rightSectionWidth={rightSectionWidth}
+      withAria={isWithAria}
+      withErrorStyles={isWithErrorStyles}
       {...rest}
     />
   );
