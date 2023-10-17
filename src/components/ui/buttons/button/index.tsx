@@ -9,47 +9,41 @@ const Button = (props: BUTTON_PROPS) => {
   const {
     children = "Submit",
     color,
-    compact: isCompact = false,
     disabled: isDisabled = false,
     fullWidth: isFullWidth = false,
     gradient,
-    leftIcon,
-    loaderPosition = "left",
     loaderProps,
     loading: isLoading = false,
     radius = "sm",
-    rightIcon,
     size = "md",
-    type = "button",
-    uppercase: isUppercase = false,
     variant = "default",
     className,
     onClick,
+    justify = "center",
+    leftSection,
+    rightSection,
     ...rest
   } = props;
 
   return (
     <MantineButton
       color={color}
-      compact={isCompact}
       disabled={isDisabled}
       fullWidth={isFullWidth}
       gradient={gradient}
-      leftIcon={leftIcon}
-      loaderPosition={loaderPosition}
       loaderProps={loaderProps}
       loading={isLoading}
       radius={radius}
-      rightIcon={rightIcon}
       size={size}
-      type={type}
-      uppercase={isUppercase}
       variant={variant}
       className={cn(
-        "bg-primary font-normal text-white hover:bg-hover",
+        "rounded-sm bg-primary px-5 py-1 font-normal text-white hover:bg-hover",
         className
       )}
+      justify={justify}
       onClick={onClick}
+      leftSection={leftSection}
+      rightSection={rightSection}
       {...rest}
     >
       {children}

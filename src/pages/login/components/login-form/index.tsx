@@ -5,8 +5,12 @@ import Button from "@/components/ui/buttons/button";
 import TextInput from "@/components/ui/inputs/text";
 import PasswordInput from "@/components/ui/inputs/password";
 import { Anchor } from "@mantine/core";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const { values, setFieldValue } = useForm({
     initialValues: {
       email: "",
@@ -19,6 +23,12 @@ const LoginForm = () => {
         val.length <= 6 ? "Password should include at least 6 characters" : null
     }
   });
+
+  const handleLogin = () => {
+    Cookies.set("accessToken", "token");
+
+    navigate("/");
+  };
 
   return (
     <section className="mx-auto py-40 md:basis-5/12 md:px-10 md:py-64 xl:basis-4/12 xl:px-28">
@@ -36,6 +46,7 @@ const LoginForm = () => {
           <Text className="text-left" data-testid="email-label">
             Email
           </Text>
+
           <TextInput
             value={values.email}
             onChange={(e) => setFieldValue("email", e.currentTarget.value)}
@@ -61,13 +72,18 @@ const LoginForm = () => {
           {/* </MeteredPassword> */}
         </div>
 
-        <Button fullWidth className="my-5" data-testid="submit-btn">
+        <Button
+          fullWidth
+          className="my-5"
+          data-testid="submit-btn"
+          onClick={handleLogin}
+        >
           Login
         </Button>
       </form>
       <div className="flex items-center space-x-3">
         <Text data-testid="register-label">New to DUKAAN?</Text>
-        <Anchor href="sign-up" data-testid="register-anchor">
+        <Anchor href="sign-up" data-testid="register-anchor" underline="always">
           Create an account
         </Anchor>
       </div>
