@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Text as MantineText, TextProps } from "@mantine/core";
-import { ReactNode } from "react";
+import { Text as MantineText, type TextProps } from "@mantine/core";
+import { type ReactNode } from "react";
 
 interface TEXT_PROPS extends TextProps {
   children: ReactNode;

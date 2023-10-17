@@ -1,7 +1,7 @@
 import Text from "@/components/ui/text";
 import { Box } from "@mantine/core";
 import { Check, X } from "lucide-react";
-import { REQUIREMENT } from ".";
+import { type REQUIREMENT } from ".";
 
 export const PasswordRequirement = ({
   meets,

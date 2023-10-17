@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import {
   TextInput as MantineTextInput,
-  TextInputProps as TEXT_INPUT_PROPS
+  type TextInputProps as TEXT_INPUT_PROPS
 } from "@mantine/core";
 
 const TextInput = (props: TEXT_INPUT_PROPS) => {

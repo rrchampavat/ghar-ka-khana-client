@@ -1,6 +1,6 @@
 import {
   PasswordInput as MantinePasswordInput,
-  PasswordInputProps as PASSWORD_INPUT_PROPS
+  type PasswordInputProps as PASSWORD_INPUT_PROPS
 } from "@mantine/core";
 import { useState } from "react";
 
