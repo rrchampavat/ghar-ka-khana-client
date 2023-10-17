@@ -1,6 +1,6 @@
 import {
   Loader as MantineLoader,
-  LoaderProps as LOADER_PROPS
+  type LoaderProps as LOADER_PROPS
 } from "@mantine/core";
 
 const Loader = (props: LOADER_PROPS) => {

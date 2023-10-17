@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Anchor as MantineAnchor, AnchorProps } from "@mantine/core";
-import { ReactNode } from "react";
+import { Anchor as MantineAnchor, type AnchorProps } from "@mantine/core";
+import { type ReactNode } from "react";
 
 interface ANCHOR_PROPS extends AnchorProps {
   children: ReactNode;

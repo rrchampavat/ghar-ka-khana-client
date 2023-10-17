@@ -1,6 +1,6 @@
 import {
   Checkbox as MantineCheckBox,
-  CheckboxProps as CHECKBOX_PROPS
+  type CheckboxProps as CHECKBOX_PROPS
 } from "@mantine/core";
 
 const CheckBox = (props: CHECKBOX_PROPS) => {
