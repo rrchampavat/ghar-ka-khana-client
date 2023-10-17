@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { type ReactNode, useState } from "react";
 import { Progress, Popover, Box } from "@mantine/core";
 import { PasswordRequirement, getStrength } from "./helper";
 

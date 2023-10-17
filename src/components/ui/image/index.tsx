@@ -1,6 +1,6 @@
 import {
   Image as MantineImage,
-  ImageProps as IMAGE_PROPS
+  type ImageProps as IMAGE_PROPS
 } from "@mantine/core";
 
 const Image = (props: IMAGE_PROPS) => {

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Button as MantineButton, ButtonProps } from "@mantine/core";
+import { Button as MantineButton, type ButtonProps } from "@mantine/core";
 
 interface BUTTON_PROPS extends ButtonProps {
   onClick?: () => void;

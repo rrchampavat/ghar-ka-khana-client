@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import {
   Title as MantineTitle,
-  TitleProps as TITLE_PROPS
+  type TitleProps as TITLE_PROPS
 } from "@mantine/core";
 
 const Title = (props: TITLE_PROPS) => {

@@ -2,7 +2,7 @@ import HeroSection from "./component/hero-section";
 
 const Dashboard = () => {
   return (
-    <div className="container">
+    <div>
       <HeroSection />
     </div>
   );
