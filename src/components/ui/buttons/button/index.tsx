@@ -37,7 +37,7 @@ const Button = (props: BUTTON_PROPS) => {
       size={size}
       variant={variant}
       className={cn(
-        "rounded-sm bg-primary px-5 py-1 font-normal text-white hover:bg-hover",
+        "rounded-sm !border-primary !bg-primary px-5 py-1 font-normal !text-white hover:!bg-[#7294f8]",
         className
       )}
       justify={justify}
