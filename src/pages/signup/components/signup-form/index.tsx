@@ -32,7 +32,7 @@ const SignUpForm = () => {
 
   return (
     <section className="mx-auto py-40 md:basis-5/12 md:px-10 md:py-64 xl:basis-4/12 xl:px-28">
-      <Text className="mb-3 text-left text-3xl font-medium">
+      <Text className="!mb-3 text-left !text-3xl !font-medium">
         Welcome to DUKAAN
       </Text>
       <Text className="mb-10 text-left leading-6">Your go to online shop</Text>
@@ -75,7 +75,9 @@ const SignUpForm = () => {
 
       <div className="flex items-center space-x-3">
         <Text>Already have an account?</Text>
-        <Anchor href="/login">Sign In</Anchor>
+        <Anchor href="login" underline="always">
+          Sign In
+        </Anchor>
       </div>
     </section>
   );
