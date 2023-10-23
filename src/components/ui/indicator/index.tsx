@@ -21,6 +21,7 @@ const Indicator = (props: INDICATOR_PROPS) => {
     className,
     ...rest
   } = props;
+
   return (
     <MantineIndicator
       position={position}

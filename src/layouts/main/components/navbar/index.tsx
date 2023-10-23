@@ -12,7 +12,7 @@ import {
   Shield
 } from "lucide-react";
 import Title from "@/components/ui/title";
-import Divider from "@/components/divider";
+import Divider from "@/components/ui/divider";
 import Anchor from "@/components/ui/anchor";
 
 const data = [

@@ -1,9 +1,9 @@
-import HeroSection from "./component/hero-section";
+import StatsGrid from "./component/stats-grid";
 
 const Dashboard = () => {
   return (
     <div>
-      <HeroSection />
+      <StatsGrid />
     </div>
   );
 };

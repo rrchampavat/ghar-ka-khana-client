@@ -9,7 +9,7 @@ interface AUTOCOMPLETE_PROPS extends AutocompleteProps {
   data: ComboboxItemGroup[];
 }
 
-export const AutoComplete = (props: AUTOCOMPLETE_PROPS) => {
+const AutoComplete = (props: AUTOCOMPLETE_PROPS) => {
   const {
     label,
     placeholder = "Search...",
@@ -105,3 +105,5 @@ export const AutoComplete = (props: AUTOCOMPLETE_PROPS) => {
     />
   );
 };
+
+export default AutoComplete;
