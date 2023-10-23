@@ -1,7 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 import Cookies from "js-cookie";
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
 import Header from "./components/header";
 
 const MainLayout = () => {
@@ -22,7 +21,6 @@ const MainLayout = () => {
             <Outlet />
           </div>
         </div>
-        <Footer />
       </main>
     </main>
   );
