@@ -1,6 +1,6 @@
-import { AutoComplete } from "@/components/autocomplete";
-import Avatar from "@/components/avatar";
-import Indicator from "@/components/indicator";
+import AutoComplete from "@/components/ui/autocomplete";
+import Avatar from "@/components/ui/avatar";
+import Indicator from "@/components/ui/indicator";
 import { useMediaQuery } from "@mantine/hooks";
 import { Bell, Search } from "lucide-react";
 
