@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ScrollArea } from "@mantine/core";
 import {
   ArrowLeftRight,
   Bell,
@@ -14,6 +13,7 @@ import {
 import Title from "@/components/ui/title";
 import Divider from "@/components/ui/divider";
 import Anchor from "@/components/ui/anchor";
+import ScrollArea from "@/components/wrapper/scroll-area";
 
 const data = [
   { link: "", label: "Notifications", icon: <Bell /> },
@@ -31,7 +31,7 @@ const Navbar = () => {
   const links = data.map((item) => (
     <a
       className={
-        "flex items-center space-x-2 rounded-md p-2 font-medium text-white hover:bg-hover data-[active=true]:bg-background data-[active=true]:text-hover"
+        "flex items-center space-x-2 rounded-md p-2 font-medium text-text hover:bg-hover data-[active=true]:bg-primary data-[active=true]:text-white sm:text-white sm:data-[active=true]:bg-background sm:data-[active=true]:text-hover"
       }
       data-active={item.label === active || undefined}
       href={item.link}
@@ -52,12 +52,12 @@ const Navbar = () => {
         offsetScrollbars
         type="scroll"
         className={
-          "!sticky top-0 col-span-1 h-screen overflow-y-auto bg-primary px-5 py-2"
+          "!sticky top-0 col-span-1 overflow-y-auto bg-white px-5 py-2 sm:h-screen sm:bg-primary"
         }
       >
         <div>
           <Anchor underline="never">
-            <Title className="cursor-pointer text-center text-white">
+            <Title className="cursor-pointer text-center text-primary sm:text-white">
               DUKAAN
             </Title>
           </Anchor>
@@ -69,7 +69,7 @@ const Navbar = () => {
           <Divider className="mb-5" />
           <a
             href="#"
-            className="flex items-center space-x-2 rounded-md p-2 font-medium text-white hover:bg-hover data-[active=true]:bg-background data-[active=true]:text-hover"
+            className="flex items-center space-x-2 rounded-md p-2 font-medium text-text hover:bg-hover data-[active=true]:bg-primary data-[active=true]:text-white sm:text-white sm:data-[active=true]:bg-background sm:data-[active=true]:text-hover"
             onClick={(event) => {
               event.preventDefault();
               setActive("Change account");
@@ -82,7 +82,7 @@ const Navbar = () => {
 
           <a
             href="#"
-            className="flex items-center space-x-2 rounded-md p-2 font-medium text-white hover:bg-hover data-[active=true]:bg-background data-[active=true]:text-hover"
+            className="flex items-center space-x-2 rounded-md p-2 font-medium text-text hover:bg-hover data-[active=true]:bg-primary data-[active=true]:text-white sm:text-white sm:data-[active=true]:bg-background sm:data-[active=true]:text-hover"
             onClick={(event) => {
               event.preventDefault();
               setActive("Logout");
