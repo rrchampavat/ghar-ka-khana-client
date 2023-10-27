@@ -1,9 +1,10 @@
+import ScrollArea from "@/components/wrapper/scroll-area";
 import { cn } from "@/lib/utils";
 import { Table as MantineTable, type TableProps } from "@mantine/core";
 import type { ReactNode } from "react";
 
 interface TABLE_PROPS extends TableProps {
-  columns: Array<string>;
+  columns: Array<string | ReactNode>;
   rows: Array<any>;
   caption?: string | ReactNode;
 }
@@ -32,17 +33,17 @@ const Table = (props: TABLE_PROPS) => {
   const rowEle = rows.map((item, id) => (
     <MantineTable.Tr key={id}>
       {Object.keys(item).map((row) => (
-        <MantineTable.Td>{item[row]}</MantineTable.Td>
+        <MantineTable.Td key={item[row]}>{item[row]}</MantineTable.Td>
       ))}
     </MantineTable.Tr>
   ));
 
-  const columnEle = columns.map((col) => (
-    <MantineTable.Th key={col}>{col}</MantineTable.Th>
+  const columnEle = columns.map((col, id) => (
+    <MantineTable.Th key={id}>{col}</MantineTable.Th>
   ));
 
   return (
-    <MantineTable.ScrollContainer minWidth={500}>
+    <ScrollArea className="h-80" type="scroll">
       <MantineTable
         borderColor={borderColor}
         captionSide={captionSide}
@@ -55,7 +56,7 @@ const Table = (props: TABLE_PROPS) => {
         withColumnBorders={isWithColumnBorders}
         withRowBorders={isWithRowBorders}
         withTableBorder={isWithTableBorder}
-        className={cn("!max-h-32", className)}
+        className={cn("", className)}
         {...rest}
       >
         <MantineTable.Thead>
@@ -63,10 +64,12 @@ const Table = (props: TABLE_PROPS) => {
         </MantineTable.Thead>
         <MantineTable.Tbody>{rowEle}</MantineTable.Tbody>
         {caption ? (
-          <MantineTable.Caption>{caption}</MantineTable.Caption>
+          <MantineTable.Caption className="!mb-0">
+            {caption}
+          </MantineTable.Caption>
         ) : null}
       </MantineTable>
-    </MantineTable.ScrollContainer>
+    </ScrollArea>
   );
 };
 

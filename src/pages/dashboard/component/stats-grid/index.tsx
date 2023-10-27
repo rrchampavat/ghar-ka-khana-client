@@ -70,8 +70,8 @@ const StatsGrid = () => {
   });
 
   return (
-    <div className="p-9">
-      <SimpleGrid cols={{ base: 1, xs: 2, md: 4 }}>{stats}</SimpleGrid>
+    <div className="mb-5">
+      <SimpleGrid cols={{ base: 2, xs: 2, md: 4 }}>{stats}</SimpleGrid>
     </div>
   );
 };

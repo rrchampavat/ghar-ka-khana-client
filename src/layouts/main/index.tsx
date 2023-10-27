@@ -12,9 +12,11 @@ const MainLayout = () => {
 
   return (
     <main className="grid grid-cols-8 grid-rows-[auto,1fr,auto]">
-      <Navbar />
+      <div className="hidden sm:block">
+        <Navbar />
+      </div>
 
-      <main className="col-span-7 flex min-h-screen w-full flex-col justify-between space-y-3">
+      <main className="col-span-8 flex min-h-screen w-full flex-col justify-between space-y-3 sm:col-span-7">
         <div>
           <Header />
           <div className="p-7">
