@@ -10,10 +10,10 @@ import {
   Settings,
   Shield
 } from "lucide-react";
-import Title from "@/components/ui/title";
-import Divider from "@/components/ui/divider";
-import Anchor from "@/components/ui/anchor";
-import ScrollArea from "@/components/wrapper/scroll-area";
+import ScrollArea from "@/ui/wrappers/scroll-area";
+import Anchor from "@/ui/components/anchor";
+import Title from "@/ui/components/title";
+import Divider from "@/ui/components/divider";
 
 const data = [
   { link: "", label: "Notifications", icon: <Bell /> },

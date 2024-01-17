@@ -1,12 +1,11 @@
 import { useForm } from "@mantine/form";
-
-import Text from "@/components/ui/text";
-import Button from "@/components/ui/buttons/button";
-import TextInput from "@/components/ui/inputs/text";
-import PasswordInput from "@/components/ui/inputs/password";
 import { Anchor } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import Text from "@/ui/components/text";
+import TextInput from "@/ui/components/inputs/text";
+import PasswordInput from "@/ui/components/inputs/password";
+import Button from "@/ui/components/buttons/button";
 
 const LoginForm = () => {
   const navigate = useNavigate();

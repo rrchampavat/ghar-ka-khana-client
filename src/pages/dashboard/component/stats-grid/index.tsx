@@ -6,10 +6,10 @@ import {
   Receipt,
   UserPlus
 } from "lucide-react";
-import Text from "@/components/ui/text";
-import Paper from "@/components/wrapper/paper";
-import Group from "@/components/wrapper/group";
-import SimpleGrid from "@/components/wrapper/simple-grid";
+import Paper from "@/ui/wrappers/paper";
+import Group from "@/ui/wrappers/group";
+import SimpleGrid from "@/ui/wrappers/simple-grid";
+import Text from "@/ui/components/text";
 
 const icons = {
   user: UserPlus,

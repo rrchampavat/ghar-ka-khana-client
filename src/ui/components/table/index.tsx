@@ -1,4 +1,4 @@
-import ScrollArea from "@/components/wrapper/scroll-area";
+import ScrollArea from "@/ui/wrappers/scroll-area";
 import { cn } from "@/lib/utils";
 import { Table as MantineTable, type TableProps } from "@mantine/core";
 import type { ReactNode } from "react";

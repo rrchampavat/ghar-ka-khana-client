@@ -1,5 +1,5 @@
-import Table from "@/components/ui/table";
-import Text from "@/components/ui/text";
+import Table from "@/ui/components/table";
+import Text from "@/ui/components/text";
 
 const elements = [
   { position: 1, mass: 12.011, symbol: "C", name: "Carbon" },

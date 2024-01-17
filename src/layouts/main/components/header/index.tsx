@@ -1,10 +1,10 @@
-import AutoComplete from "@/components/ui/autocomplete";
-import Avatar from "@/components/ui/avatar";
-import Indicator from "@/components/ui/indicator";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { Bell, Menu, Search } from "lucide-react";
-import Drawer from "@/components/ui/drawer";
 import Navbar from "../navbar";
+import Drawer from "@/ui/components/drawer";
+import AutoComplete from "@/ui/components/autocomplete";
+import Indicator from "@/ui/components/indicator";
+import Avatar from "@/ui/components/avatar";
 
 const Header = () => {
   const isMobile = useMediaQuery("(max-width: 56.25rem)");

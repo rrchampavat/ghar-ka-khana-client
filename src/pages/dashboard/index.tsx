@@ -1,4 +1,4 @@
-import SimpleGrid from "@/components/wrapper/simple-grid";
+import SimpleGrid from "@/ui/wrappers/simple-grid";
 import ProductTable from "./component/product-table";
 import StatsGrid from "./component/stats-grid";
 import { useMediaQuery } from "@mantine/hooks";

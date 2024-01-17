@@ -1,11 +1,10 @@
 import { useForm } from "@mantine/form";
-
-import Text from "@/components/ui/text";
-import Button from "@/components/ui/buttons/button";
-import TextInput from "@/components/ui/inputs/text";
-import PasswordInput from "@/components/ui/inputs/password";
-import MeteredPassword from "@/components/ui/inputs/meteredPassword";
 import { Anchor } from "@mantine/core";
+import Text from "@/ui/components/text";
+import TextInput from "@/ui/components/inputs/text";
+import MeteredPassword from "@/ui/components/inputs/meteredPassword";
+import PasswordInput from "@/ui/components/inputs/password";
+import Button from "@/ui/components/buttons/button";
 
 const SignUpForm = () => {
   const { values, setFieldValue } = useForm({

@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import routes from "./routes/routes";
-import Fallback from "./components/ui/fallback";
+import Fallback from "./ui/components/fallback";
 
 function App() {
   return (

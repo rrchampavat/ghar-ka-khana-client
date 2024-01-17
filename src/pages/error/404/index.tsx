@@ -1,9 +1,9 @@
-import Container from "@/components/wrapper/container";
-import SimpleGrid from "@/components/wrapper/simple-grid";
-import Image from "@/components/ui/image";
-import Title from "@/components/ui/title";
-import Text from "@/components/ui/text";
-import Button from "@/components/ui/buttons/button";
+import Button from "@/ui/components/buttons/button";
+import Image from "@/ui/components/image";
+import Text from "@/ui/components/text";
+import Title from "@/ui/components/title";
+import Container from "@/ui/wrappers/container";
+import SimpleGrid from "@/ui/wrappers/simple-grid";
 import { useNavigate } from "react-router-dom";
 
 const NotFoundImage = () => {
