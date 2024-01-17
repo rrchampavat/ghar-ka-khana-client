@@ -11,9 +11,9 @@ import {
   Shield
 } from "lucide-react";
 import ScrollArea from "@/ui/wrappers/scroll-area";
-import Anchor from "@/ui/components/anchor";
 import Title from "@/ui/components/title";
 import Divider from "@/ui/components/divider";
+import Anchor from "@/ui/components/anchor";
 
 const data = [
   { link: "", label: "Notifications", icon: <Bell /> },
