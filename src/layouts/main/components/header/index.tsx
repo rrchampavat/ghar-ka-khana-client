@@ -1,11 +1,11 @@
 import { useMediaQuery } from "@mantine/hooks";
 import { Bell, Menu, Search } from "lucide-react";
 import Navbar from "../navbar";
-import Drawer from "@/ui/components/drawer";
 import AutoComplete from "@/ui/components/autocomplete";
 import Indicator from "@/ui/components/indicator";
 import Avatar from "@/ui/components/avatar";
 import { Burger } from "@mantine/core";
+import MantineDrawer from "@/ui/components/styled/drawer";
 
 const Header = (props: any) => {
   const isMobile = useMediaQuery("(max-width: 56.25rem)");
@@ -27,6 +27,7 @@ const Header = (props: any) => {
           onClick={toggleMobile}
           hiddenFrom="sm"
           size="sm"
+          className="hidden sm:block"
         />
         <Burger
           opened={isDesktopOpen}
@@ -35,14 +36,14 @@ const Header = (props: any) => {
           size="sm"
         />
         <div className="flex items-center space-x-3">
-          <Drawer
+          <MantineDrawer
             opened={isMobileOpen}
             onClose={close}
             className="block bg-primary sm:hidden"
             size="xs"
           >
             <Navbar />
-          </Drawer>
+          </MantineDrawer>
 
           <Menu onClick={open} className="block sm:!hidden" />
 
