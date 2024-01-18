@@ -23,8 +23,8 @@ const MainLayout = () => {
       header={{ height: { base: 60 }, collapsed: !isPinned, offset: true }}
       navbar={{
         breakpoint: "sm",
-        collapsed: { mobile: !isMobileOpen, desktop: !isDesktopOpen },
-        width: { base: 250 }
+        collapsed: { mobile: true, desktop: !isDesktopOpen },
+        width: { base: 250, sm: 200, lg: 250 }
       }}
       padding="xl"
     >
