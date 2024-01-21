@@ -1,4 +1,3 @@
-import { useForm } from "@mantine/form";
 import { Anchor } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
@@ -6,31 +5,50 @@ import Text from "@/ui/components/text";
 import TextInput from "@/ui/components/inputs/text";
 import PasswordInput from "@/ui/components/inputs/password";
 import Button from "@/ui/components/buttons/button";
+import { login } from "@/services/auth/login";
+import { useState } from "react";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import loginSchema from "@/shared/validation-schemas/auth/login";
+import { yupResolver } from "@hookform/resolvers/yup";
+import Controller from "@/ui/components/controller";
+
+const initialLoginValues: LOGIN_PAYLOAD = {
+  emailOrContact: "",
+  password: ""
+};
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const { values, setFieldValue } = useForm({
-    initialValues: {
-      email: "",
-      password: ""
-    },
-
-    validate: {
-      email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
-      password: (val) =>
-        val.length <= 6 ? "Password should include at least 6 characters" : null
-    }
+  const { handleSubmit, control } = useForm<LOGIN_PAYLOAD>({
+    resolver: yupResolver(loginSchema),
+    defaultValues: initialLoginValues,
+    mode: "all"
   });
 
-  const handleLogin = () => {
-    Cookies.set("accessToken", "token");
+  const handleLogin: SubmitHandler<LOGIN_PAYLOAD> = async (values) => {
+    try {
+      setIsLoading(true);
 
-    navigate("/");
+      const response = await login(values);
+
+      const { data, success: isSuccess } = response;
+
+      if (isSuccess) {
+        Cookies.set("accessToken", data.accessToken);
+
+        navigate("/");
+      }
+    } catch (error: any) {
+      throw new Error(error?.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <section className="mx-auto py-40 md:basis-5/12 md:px-10 md:py-64 xl:basis-4/12 xl:px-28">
+    <section className="mx-auto my-auto px-8 md:basis-5/12 lg:px-20 xl:basis-4/12">
       <Text
         className="!mb-3 text-left !text-3xl !font-medium"
         data-testid="form-header"
@@ -43,14 +61,20 @@ const LoginForm = () => {
       <form>
         <div className="my-10 space-y-3">
           <Text className="text-left" data-testid="email-label">
-            Email
+            Email or Contact number
           </Text>
 
-          <TextInput
-            value={values.email}
-            onChange={(e) => setFieldValue("email", e.currentTarget.value)}
-            placeholder="example@gmail.com"
-            data-testid="email-input"
+          <Controller
+            name="emailOrContact"
+            control={control}
+            render={({ field, formState }) => (
+              <TextInput
+                placeholder="Email or Contact number"
+                // @ts-expect-error
+                error={formState.errors.emailOrContact?.message}
+                {...field}
+              />
+            )}
           />
         </div>
 
@@ -58,24 +82,27 @@ const LoginForm = () => {
           <Text className="mb-2 text-left" data-testid="password-label">
             Password
           </Text>
-          {/* <MeteredPassword
-            passwordRequirements={passwordRequirements}
-            value={values.password}
-          > */}
-          <PasswordInput
-            value={values.password}
-            onChange={(e) => setFieldValue("password", e.currentTarget.value)}
-            placeholder="Password"
-            data-testid="password-input"
+
+          <Controller
+            name="password"
+            control={control}
+            render={({ field, formState }) => (
+              <PasswordInput
+                placeholder="Password"
+                // @ts-expect-error
+                error={formState.errors.password?.message}
+                {...field}
+              />
+            )}
           />
-          {/* </MeteredPassword> */}
         </div>
 
         <Button
           fullWidth
           className="my-5"
           data-testid="submit-btn"
-          onClick={handleLogin}
+          onClick={handleSubmit(handleLogin)}
+          loading={isLoading}
         >
           Login
         </Button>
