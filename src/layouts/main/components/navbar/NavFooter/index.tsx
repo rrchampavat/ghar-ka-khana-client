@@ -1,6 +1,8 @@
 import Divider from "@/ui/components/divider";
 import { ArrowLeftRight, LogOut } from "lucide-react";
 import type { Dispatch, MouseEvent, SetStateAction } from "react";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 export interface ACTIVE_TAB {
   active: string;
@@ -10,12 +12,19 @@ export interface ACTIVE_TAB {
 const NavFooter = (props: ACTIVE_TAB) => {
   const { active, setActive } = props;
 
+  const navigate = useNavigate();
+
   const handleClick = (
     e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>,
     link: string
   ) => {
     e.preventDefault();
     setActive(link);
+
+    if (link === "Logout") {
+      Cookies.remove("accessToken");
+      navigate("/login");
+    }
   };
 
   return (

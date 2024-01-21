@@ -30,7 +30,7 @@ const SignUpForm = () => {
   ];
 
   return (
-    <section className="mx-auto py-40 md:basis-5/12 md:px-10 md:py-64 xl:basis-4/12 xl:px-28">
+    <section className="mx-auto py-40 md:basis-5/12 md:px-10 md:py-44 xl:basis-4/12 xl:px-28">
       <Text className="!mb-3 text-left !text-3xl !font-medium">
         Welcome to DUKAAN
       </Text>

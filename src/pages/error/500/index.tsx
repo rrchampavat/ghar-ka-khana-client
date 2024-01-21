@@ -18,7 +18,9 @@ const ServerError = () => {
         </Text>
 
         <Group justify="center">
-          <Button size="md">Refresh the page</Button>
+          <Button size="md" onClick={() => window.location.reload()}>
+            Refresh the page
+          </Button>
         </Group>
       </Container>
     </div>
