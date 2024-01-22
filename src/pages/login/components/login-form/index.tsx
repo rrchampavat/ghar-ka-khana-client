@@ -1,55 +1,44 @@
-import { Anchor } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
-import Cookies from "js-cookie";
-import Text from "@/ui/components/text";
-import TextInput from "@/ui/components/inputs/text";
-import PasswordInput from "@/ui/components/inputs/password";
-import Button from "@/ui/components/buttons/button";
-import { login } from "@/services/auth/login";
-import { useState } from "react";
-import { useForm, type SubmitHandler } from "react-hook-form";
-import loginSchema from "@/shared/validation-schemas/auth/login";
-import { yupResolver } from "@hookform/resolvers/yup";
-import Controller from "@/ui/components/controller";
+import { Input as NextInput } from "@nextui-org/react";
 
-const initialLoginValues: LOGIN_PAYLOAD = {
-  emailOrContact: "",
-  password: ""
-};
+// const initialLoginValues: LOGIN_PAYLOAD = {
+//   emailOrContact: "",
+//   password: ""
+// };
 
 const LoginForm = () => {
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const navigate = useNavigate();
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const { handleSubmit, control } = useForm<LOGIN_PAYLOAD>({
-    resolver: yupResolver(loginSchema),
-    defaultValues: initialLoginValues,
-    mode: "all"
-  });
+  // const { handleSubmit, control } = useForm<LOGIN_PAYLOAD>({
+  //   resolver: yupResolver(loginSchema),
+  //   defaultValues: initialLoginValues,
+  //   mode: "all"
+  // });
 
-  const handleLogin: SubmitHandler<LOGIN_PAYLOAD> = async (values) => {
-    try {
-      setIsLoading(true);
+  // const handleLogin: SubmitHandler<LOGIN_PAYLOAD> = async (values) => {
+  //   try {
+  //     setIsLoading(true);
 
-      const response = await login(values);
+  //     const response = await login(values);
 
-      const { data, success: isSuccess } = response;
+  //     const { data, success: isSuccess } = response;
 
-      if (isSuccess) {
-        Cookies.set("accessToken", data.accessToken);
+  //     if (isSuccess) {
+  //       Cookies.set("accessToken", data.accessToken);
 
-        navigate("/");
-      }
-    } catch (error: any) {
-      throw new Error(error?.message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //       navigate("/");
+  //     }
+  //   } catch (error: any) {
+  //     throw new Error(error?.message);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   return (
     <section className="mx-auto my-auto px-8 md:basis-5/12 lg:px-20 xl:basis-4/12">
-      <Text
+      {/* <H1>Welcome to Ghar ka Khana.</H1> */}
+      {/* <Text
         className="!mb-3 text-left !text-3xl !font-medium"
         data-testid="form-header"
       >
@@ -57,10 +46,15 @@ const LoginForm = () => {
       </Text>
       <Text className="mb-10 text-left leading-6" data-testid="form-headline">
         Your go to online shop
-      </Text>
+      </Text> */}
       <form>
         <div className="my-10 space-y-3">
-          <Text className="text-left" data-testid="email-label">
+          <NextInput
+            type="text"
+            label="Email or Contact number"
+            variant="underlined"
+          />
+          {/* <Text className="text-left" data-testid="email-label">
             Email or Contact number
           </Text>
 
@@ -75,11 +69,11 @@ const LoginForm = () => {
                 {...field}
               />
             )}
-          />
+          /> */}
         </div>
 
         <div className="my-10 space-y-3">
-          <Text className="mb-2 text-left" data-testid="password-label">
+          {/* <Text className="mb-2 text-left" data-testid="password-label">
             Password
           </Text>
 
@@ -94,10 +88,10 @@ const LoginForm = () => {
                 {...field}
               />
             )}
-          />
+          /> */}
         </div>
 
-        <Button
+        {/* <Button
           fullWidth
           className="my-5"
           data-testid="submit-btn"
@@ -105,13 +99,13 @@ const LoginForm = () => {
           loading={isLoading}
         >
           Login
-        </Button>
+        </Button> */}
       </form>
       <div className="flex items-center space-x-3">
-        <Text data-testid="register-label">New to DUKAAN?</Text>
+        {/* <Text data-testid="register-label">New to DUKAAN?</Text>
         <Anchor href="sign-up" data-testid="register-anchor" underline="always">
           Create an account
-        </Anchor>
+        </Anchor> */}
       </div>
     </section>
   );
