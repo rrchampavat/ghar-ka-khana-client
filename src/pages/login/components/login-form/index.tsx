@@ -1,3 +1,4 @@
+import { TypographyH1, TypographyLead } from "@/ui/components/typography";
 import { Input as NextInput } from "@nextui-org/react";
 
 // const initialLoginValues: LOGIN_PAYLOAD = {
@@ -37,16 +38,10 @@ const LoginForm = () => {
 
   return (
     <section className="mx-auto my-auto px-8 md:basis-5/12 lg:px-20 xl:basis-4/12">
-      {/* <H1>Welcome to Ghar ka Khana.</H1> */}
-      {/* <Text
-        className="!mb-3 text-left !text-3xl !font-medium"
-        data-testid="form-header"
-      >
-        Welcome to DUKAAN
-      </Text>
-      <Text className="mb-10 text-left leading-6" data-testid="form-headline">
-        Your go to online shop
-      </Text> */}
+      <TypographyH1>Welcome to Ghar ka Khana.</TypographyH1>
+
+      <TypographyLead>Your goto online tiffin service .</TypographyLead>
+
       <form>
         <div className="my-10 space-y-3">
           <NextInput
