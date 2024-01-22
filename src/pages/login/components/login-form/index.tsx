@@ -1,5 +1,5 @@
+import Input from "@/ui/components/input";
 import { TypographyH1, TypographyLead } from "@/ui/components/typography";
-import { Input as NextInput } from "@nextui-org/react";
 
 // const initialLoginValues: LOGIN_PAYLOAD = {
 //   emailOrContact: "",
@@ -44,11 +44,12 @@ const LoginForm = () => {
 
       <form>
         <div className="my-10 space-y-3">
-          <NextInput
+          <Input
             type="text"
             label="Email or Contact number"
-            variant="underlined"
+            variant="bordered"
           />
+          <Input type="password" label="Password" variant="bordered" />
           {/* <Text className="text-left" data-testid="email-label">
             Email or Contact number
           </Text>
