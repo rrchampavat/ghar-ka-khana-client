@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const { nextui } = require("@nextui-org/react");
 
 module.exports = {
   darkMode: ["class"],
@@ -7,7 +8,8 @@ module.exports = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"
+    "./src/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   prefix: "",
   theme: {
@@ -19,34 +21,35 @@ module.exports = {
       }
     },
     extend: {
-      colors: {
-        primary: "#5d87ff",
-        hover: "#4570ea",
-        secondary: "#4ABDFB",
-        accent: "#edf0ff",
-        text: "#2B3248",
-        background: "#F2F4FC",
-        success: "#51B987",
-        error: "#F25051"
-      },
+      // colors: {
+      //   primary: "#5d87ff",
+      //   hover: "#4570ea",
+      //   secondary: "#4ABDFB",
+      //   accent: "#edf0ff",
+      //   text: "#2B3248",
+      //   background: "#F2F4FC",
+      //   success: "#51B987",
+      //   error: "#F25051"
+      // },
       fontFamily: {
         sans: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans]
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" }
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" }
-        }
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"
       }
+      // keyframes: {
+      //   "accordion-down": {
+      //     from: { height: "0" },
+      //     to: { height: "var(--radix-accordion-content-height)" }
+      //   },
+      //   "accordion-up": {
+      //     from: { height: "var(--radix-accordion-content-height)" },
+      //     to: { height: "0" }
+      //   }
+      // },
+      // animation: {
+      //   "accordion-down": "accordion-down 0.2s ease-out",
+      //   "accordion-up": "accordion-up 0.2s ease-out"
+      // }
     }
+    // plugins: []
   },
-  plugins: [require("tailwindcss-animate")]
+  plugins: [require("tailwindcss-animate"), nextui()]
 };
