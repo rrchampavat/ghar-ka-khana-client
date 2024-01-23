@@ -12,6 +12,7 @@ const ButtonGroup = (props: ButtonGroupProps) => {
     radius = "sm",
     fullWidth: isFullWidth = false,
     isDisabled = false,
+    className,
     ...restProps
   } = props;
   return (
