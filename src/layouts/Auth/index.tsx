@@ -1,10 +1,23 @@
 import { Navigate, Outlet } from "react-router-dom";
 import Cookies from "js-cookie";
 import useDarkMode from "use-dark-mode";
+import { useEffect } from "react";
 
 const AuthLayout = () => {
   const isAuthenticated = !!Cookies.get("accessToken");
   const { value: isDarkMode } = useDarkMode(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document
+        .getElementsByTagName("div")[1]
+        ?.classList.add("bg-background", "dark");
+
+      return;
+    }
+
+    document.getElementsByTagName("div")[1]?.classList.remove("dark");
+  }, [isDarkMode]);
 
   if (isAuthenticated) {
     return <Navigate to="/" replace />;

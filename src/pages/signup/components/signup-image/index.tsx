@@ -10,7 +10,7 @@ const SignUpImage = () => {
   return (
     <img
       src={imageSrc}
-      className="mx-auto hidden h-60 w-28 bg-background md:block "
+      className="mx-auto hidden h-60 w-28 bg-background md:block"
       alt="Logo"
     />
   );
