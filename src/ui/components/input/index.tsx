@@ -26,6 +26,7 @@ const Input = (props: InputProps) => {
     isInvalid = Boolean(errorMessage),
     disableAnimation: shouldDisableAnimation = false,
     className,
+    classNames,
     onChange,
     onValueChange,
     ...restProps
@@ -58,6 +59,7 @@ const Input = (props: InputProps) => {
       className={cn(className)}
       onChange={onChange}
       onValueChange={onValueChange}
+      classNames={classNames}
       {...restProps}
     />
   );

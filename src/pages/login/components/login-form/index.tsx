@@ -1,4 +1,5 @@
 import Input from "@/ui/components/input";
+import PasswordInput from "@/ui/components/input/password-input";
 import { TypographyH1, TypographyLead } from "@/ui/components/typography";
 
 // const initialLoginValues: LOGIN_PAYLOAD = {
@@ -44,12 +45,8 @@ const LoginForm = () => {
 
       <form>
         <div className="my-10 space-y-3">
-          <Input
-            type="text"
-            label="Email or Contact number"
-            variant="bordered"
-          />
-          <Input type="password" label="Password" variant="bordered" />
+          <Input type="text" label="Email or Contact number" />
+          <PasswordInput />
           {/* <Text className="text-left" data-testid="email-label">
             Email or Contact number
           </Text>
