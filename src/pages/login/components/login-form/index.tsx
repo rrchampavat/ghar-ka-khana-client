@@ -1,3 +1,4 @@
+import Button from "@/ui/components/button";
 import Input from "@/ui/components/input";
 import PasswordInput from "@/ui/components/input/password-input";
 import { TypographyH1, TypographyLead } from "@/ui/components/typography";
@@ -43,11 +44,10 @@ const LoginForm = () => {
 
       <TypographyLead>Your goto online tiffin service .</TypographyLead>
 
-      <form>
-        <div className="my-10 space-y-3">
-          <Input type="text" label="Email or Contact number" />
-          <PasswordInput />
-          {/* <Text className="text-left" data-testid="email-label">
+      <form className="my-10 flex flex-col items-center space-y-3">
+        <Input type="text" label="Email or Contact number" />
+        <PasswordInput className="mb-5" />
+        {/* <Text className="text-left" data-testid="email-label">
             Email or Contact number
           </Text>
 
@@ -63,36 +63,7 @@ const LoginForm = () => {
               />
             )}
           /> */}
-        </div>
-
-        <div className="my-10 space-y-3">
-          {/* <Text className="mb-2 text-left" data-testid="password-label">
-            Password
-          </Text>
-
-          <Controller
-            name="password"
-            control={control}
-            render={({ field, formState }) => (
-              <PasswordInput
-                placeholder="Password"
-                // @ts-expect-error
-                error={formState.errors.password?.message}
-                {...field}
-              />
-            )}
-          /> */}
-        </div>
-
-        {/* <Button
-          fullWidth
-          className="my-5"
-          data-testid="submit-btn"
-          onClick={handleSubmit(handleLogin)}
-          loading={isLoading}
-        >
-          Login
-        </Button> */}
+        <Button className="!mt-6 w-fit">Login</Button>
       </form>
       <div className="flex items-center space-x-3">
         {/* <Text data-testid="register-label">New to DUKAAN?</Text>
