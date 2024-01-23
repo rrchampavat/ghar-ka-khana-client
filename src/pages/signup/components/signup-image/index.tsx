@@ -1,8 +1,17 @@
+import useDarkMode from "use-dark-mode";
+
 const SignUpImage = () => {
+  const { value: isDarkMode } = useDarkMode(false);
+
+  const imageSrc = isDarkMode
+    ? "/svgs/logo-white-transparent.svg"
+    : "/svgs/logo-black-transparent.svg";
+
   return (
     <img
-      src="/svgs/login-bg.svg"
-      className="hidden h-screen w-28 bg-background md:block md:basis-7/12 xl:basis-8/12"
+      src={imageSrc}
+      className="mx-auto hidden h-60 w-28 bg-background md:block "
+      alt="Logo"
     />
   );
 };

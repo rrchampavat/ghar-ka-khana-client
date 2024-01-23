@@ -14,7 +14,7 @@ const AuthLayout = () => {
     <main
       className={`${
         isDarkMode ? "dark" : ""
-      } grid h-screen items-center bg-background text-foreground md:grid-cols-4 lg:grid-cols-5`}
+      } container grid h-screen items-center bg-background text-foreground md:grid-cols-[2fr_2fr] lg:grid-cols-[3fr_2fr]`}
     >
       <Outlet />
     </main>

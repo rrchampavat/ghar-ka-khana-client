@@ -51,7 +51,7 @@ const LoginForm = () => {
   };
 
   return (
-    <section className="mx-auto my-auto px-8 md:col-span-2 md:border-l-1 lg:col-span-2 lg:px-12 xl:px-20">
+    <section className="mx-auto my-auto px-4 md:border-l-1 lg:px-12 xl:px-20">
       <TypographyH1>Welcome to Ghar ka Khana</TypographyH1>
 
       <TypographyLead>Your goto online tiffin service</TypographyLead>
