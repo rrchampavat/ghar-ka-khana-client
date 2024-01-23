@@ -21,16 +21,16 @@ module.exports = {
       }
     },
     extend: {
-      // colors: {
-      //   primary: "#5d87ff",
-      //   hover: "#4570ea",
-      //   secondary: "#4ABDFB",
-      //   accent: "#edf0ff",
-      //   text: "#2B3248",
-      //   background: "#F2F4FC",
-      //   success: "#51B987",
-      //   error: "#F25051"
-      // },
+      colors: {
+        //   primary: "#5d87ff",
+        //   hover: "#4570ea",
+        //   secondary: "#4ABDFB",
+        //   accent: "#edf0ff",
+        //   text: "#2B3248",
+        //   background: "#F2F4FC",
+        success: "#51B987",
+        error: "#F25051"
+      },
       fontFamily: {
         sans: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans]
       }
