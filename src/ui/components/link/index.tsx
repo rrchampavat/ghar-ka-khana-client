@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Link as NextUILink, type LinkProps } from "@nextui-org/react";
 
 const Link = (props: LinkProps) => {
@@ -26,6 +27,7 @@ const Link = (props: LinkProps) => {
     onKeyDown,
     onKeyUp,
     onClick,
+    className,
     ...restProps
   } = props;
 
@@ -54,6 +56,7 @@ const Link = (props: LinkProps) => {
       onKeyDown={onKeyDown}
       onKeyUp={onKeyUp}
       onClick={onClick}
+      className={cn(className)}
       {...restProps}
     >
       {children}
