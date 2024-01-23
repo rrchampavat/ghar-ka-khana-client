@@ -10,7 +10,7 @@ const LoginImage = () => {
   return (
     <img
       src={imageSrc}
-      className="hidden h-60 w-28 border-r-1 bg-background md:block md:basis-7/12 lg:h-72 xl:basis-8/12"
+      className="mx-auto hidden h-60 w-28 bg-background md:col-span-2 md:block lg:col-span-3"
       alt="Logo"
     />
   );

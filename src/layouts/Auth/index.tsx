@@ -12,7 +12,9 @@ const AuthLayout = () => {
 
   return (
     <main
-      className={`${isDarkMode ? "dark" : ""} bg-background text-foreground`}
+      className={`${
+        isDarkMode ? "dark" : ""
+      } grid h-screen items-center bg-background text-foreground md:grid-cols-4 lg:grid-cols-5`}
     >
       <Outlet />
     </main>

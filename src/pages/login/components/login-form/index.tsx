@@ -27,7 +27,7 @@ const LoginForm = () => {
   const { handleSubmit, control } = useForm<LOGIN_PAYLOAD>({
     resolver: yupResolver(loginSchema),
     defaultValues: initialLoginValues,
-    mode: "all"
+    mode: "onSubmit"
   });
 
   const handleLogin: SubmitHandler<LOGIN_PAYLOAD> = async (values) => {
@@ -51,7 +51,7 @@ const LoginForm = () => {
   };
 
   return (
-    <section className="mx-auto my-auto px-8 md:basis-5/12 lg:px-20 xl:basis-4/12">
+    <section className="mx-auto my-auto px-8 md:col-span-2 md:border-l-1 lg:col-span-2 lg:px-12 xl:px-20">
       <TypographyH1>Welcome to Ghar ka Khana</TypographyH1>
 
       <TypographyLead>Your goto online tiffin service</TypographyLead>
@@ -90,9 +90,10 @@ const LoginForm = () => {
           Login
         </Button>
       </form>
+
       <div className="flex justify-between space-x-3">
         <TypographyP>New to Ghar ka Khana ?</TypographyP>
-        <Link href="/login">Create an account</Link>
+        <Link href="/sign-up">Create an account</Link>
       </div>
     </section>
   );
