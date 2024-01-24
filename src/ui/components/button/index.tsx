@@ -5,7 +5,7 @@ const Button = (props: ButtonProps) => {
   const {
     children,
     variant = "ghost",
-    color = "primary",
+    color = "default",
     size = "md",
     radius = "sm",
     startContent,

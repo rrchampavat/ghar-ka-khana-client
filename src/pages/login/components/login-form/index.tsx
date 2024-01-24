@@ -54,7 +54,7 @@ const LoginForm = () => {
     <section className="mx-auto my-auto px-4 md:border-l-1 lg:px-12 xl:px-20">
       <TypographyH1>Welcome to Ghar ka Khana</TypographyH1>
 
-      <TypographyLead>Your goto online tiffin service</TypographyLead>
+      <TypographyLead>Your goto online tiffin service.</TypographyLead>
 
       <form className="my-10 flex flex-col items-center space-y-3">
         <Controller
