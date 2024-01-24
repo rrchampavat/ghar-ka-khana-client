@@ -2,16 +2,16 @@ import { AUTH } from "@/shared/constants/request-urls";
 import post from "../axios-methods/post";
 import { toast } from "@/ui/components/toast/use-toast";
 
-export const login = async (payload: LOGIN_PAYLOAD) => {
+export const register = async (payload: REGISTER_PAYLOAD) => {
   try {
-    const response: LOGIN_RESPONSE = await post(payload, AUTH.LOGIN);
+    const response: LOGIN_RESPONSE = await post(payload, AUTH.REGISTER);
 
     const { data } = response;
 
     if (!data.success) {
       toast({
         variant: "destructive",
-        title: "Login Error!",
+        title: "Register Error!",
         description: data.message
       });
 
@@ -21,6 +21,12 @@ export const login = async (payload: LOGIN_PAYLOAD) => {
         success: false
       };
     }
+
+    toast({
+      variant: "success",
+      title: "Registration successful!",
+      description: data.message
+    });
 
     return data;
   } catch (error: any) {
