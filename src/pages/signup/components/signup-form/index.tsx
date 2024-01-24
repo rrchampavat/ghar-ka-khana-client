@@ -20,14 +20,17 @@ const SignUpForm = () => {
     <section className="mx-auto my-auto px-4 md:border-l-1 lg:px-12 xl:px-20">
       <TypographyH1>Welcome to Ghar ka Khana</TypographyH1>
 
-      <TypographyLead>Your goto online tiffin service</TypographyLead>
+      <TypographyLead>Your goto online tiffin service.</TypographyLead>
 
       <form className="my-10 flex flex-col items-center space-y-3">
-        <Input type="text" label="Email or Contact number" />
+        <Input type="text" label="First name" />
+        <Input type="text" label="Last name" />
+        <Input type="email" label="Email" />
+        <Input type="number" label="Contact number" />
 
         <PasswordInput className="mb-5" />
 
-        <Button className="!mt-6 w-fit">Login</Button>
+        <Button className="!mt-6 w-fit">Sign up</Button>
       </form>
 
       <div className="flex justify-between space-x-3">
