@@ -92,7 +92,7 @@ const LoginForm = () => {
       </form>
 
       <div className="flex justify-between space-x-3">
-        <TypographyP>New to Ghar ka Khana ?</TypographyP>
+        <TypographyP>New to Ghar ka Khana?</TypographyP>
         <Link href="/sign-up">Create an account</Link>
       </div>
     </section>

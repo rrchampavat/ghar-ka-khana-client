@@ -8,14 +8,14 @@ import {
   TypographyP
 } from "@/ui/components/typography";
 
-const SignUpForm = () => {
-  const _requirements = [
-    { re: /[0-9]/, label: "Includes number" },
-    { re: /[a-z]/, label: "Includes lowercase letter" },
-    { re: /[A-Z]/, label: "Includes uppercase letter" },
-    { re: /[$&+,:;=?@#|'<>.^*()%!-]/, label: "Includes special symbol" }
-  ];
+const _requirements = [
+  { re: /[0-9]/, label: "Includes number" },
+  { re: /[a-z]/, label: "Includes lowercase letter" },
+  { re: /[A-Z]/, label: "Includes uppercase letter" },
+  { re: /[$&+,:;=?@#|'<>.^*()%!-]/, label: "Includes special symbol" }
+];
 
+const SignUpForm = () => {
   return (
     <section className="mx-auto my-auto px-4 md:border-l-1 lg:px-12 xl:px-20">
       <TypographyH1>Welcome to Ghar ka Khana</TypographyH1>
