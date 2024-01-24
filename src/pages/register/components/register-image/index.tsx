@@ -1,6 +1,6 @@
 import useDarkMode from "use-dark-mode";
 
-const SignUpImage = () => {
+const RegisterImage = () => {
   const { value: isDarkMode } = useDarkMode(false);
 
   const imageSrc = isDarkMode
@@ -16,4 +16,4 @@ const SignUpImage = () => {
   );
 };
 
-export default SignUpImage;
+export default RegisterImage;
