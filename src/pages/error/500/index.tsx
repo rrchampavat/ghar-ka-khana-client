@@ -1,7 +1,24 @@
-import { TypographyH1 } from "@/ui/components/typography";
+import Button from "@/ui/components/button";
+import { TypographyH1, TypographyH4 } from "@/ui/components/typography";
+import { useNavigate } from "react-router-dom";
 
 const ServerError = () => {
-  return <TypographyH1>Server Error.</TypographyH1>;
+  const navigate = useNavigate();
+
+  return (
+    <div className="flex h-screen flex-col items-center justify-center space-y-3">
+      <TypographyH1>500</TypographyH1>
+      <TypographyH4>
+        Oops! Something went wrong on our end. Please try again later.
+      </TypographyH4>
+      <Button
+        className="w-fit border-black bg-black text-white hover:!bg-black"
+        onClick={() => navigate("/")}
+      >
+        Go Home
+      </Button>
+    </div>
+  );
 };
 
 export default ServerError;
