@@ -1,5 +1,5 @@
-import { Navigate, Outlet } from "react-router-dom";
 import Cookies from "js-cookie";
+import { Navigate, Outlet } from "react-router-dom";
 
 const AuthLayout = () => {
   const isAuthenticated = !!Cookies.get("accessToken");

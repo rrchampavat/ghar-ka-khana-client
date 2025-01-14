@@ -1,6 +1,6 @@
 import { AUTH } from "@/shared/constants/request-urls";
-import post from "../axios-methods/post";
 import { toast } from "@/ui/components/toast/use-toast";
+import post from "../axios-methods/post";
 
 export const login = async (payload: LOGIN_PAYLOAD) => {
   try {
